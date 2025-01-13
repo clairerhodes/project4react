@@ -1,4 +1,4 @@
-import Navbar from '../nav/nav.jsx';
+import Navbar from '../nav/Navbar.jsx';
 import { useEffect, useState} from 'react';
 
 const Home = ({content = [], setContent}) => {

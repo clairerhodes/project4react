@@ -17,11 +17,13 @@ const App = () => {
     <>
       <Navbar setPage={setPage} />
       {/* default show home page */}
-      {page === 'Home' ? <Home content={content} setContent={setContent}/> : ''}
+        {page === 'Home' ? <Home content={content} setContent={setContent}/> : ''}
       {/* user profile section */}
         {/* do we also want to have page that shows a list of users to click? or just ability to click on a user through their post */}
+        {page === "profile" ? <Profile /> : ""}
       {/* post section */}
         {page === "viewPost" ? <ViewPost /> : ""}
+        
       {/* authentication section */}
         {page === "login" ? <LogIn /> : ""}
         {page === "signup" ? <SignUp /> : ""}

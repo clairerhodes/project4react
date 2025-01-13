@@ -3,9 +3,9 @@ const Navbar = ({handleSection}) => {
     return (
         <nav>
             <button onClick={handleSection} value="Home">Home</button>
-            <button onClick={handleSection} value="Profile">My Profile</button>
-            <button onClick={handleSection} value="">New Post</button>
-            <button onClick={handleSection} value="">Log Out</button>
+            <button onClick={handleSection} value="newPost">New Post</button>
+            <button onClick={handleSection} value="profile">My Profile</button>
+            <button onClick={handleSection} value="logOut">Log Out</button>
         </nav>
     );
 };
