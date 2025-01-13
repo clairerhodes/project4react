@@ -2,6 +2,9 @@
 import {useState, useEffect} from "react";
 
 const ViewPost = (props, {handleSection}) => {
+
+    const BASE_URL = 'http:/localhost:8000/api/blogpost'
+
     const [post, setPost] = useState({
         subjectLine: "",
         companyName: "",
@@ -16,7 +19,7 @@ const ViewPost = (props, {handleSection}) => {
     useEffect(() => {
         const getPostData = async () => {
             try {
-                const res = await fetch('');
+                const res = await fetch(BASE_URL);
                 let JSONdata = await res.json();
                 setPost(JSONdata);
             } catch (err) {
