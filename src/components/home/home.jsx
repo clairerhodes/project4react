@@ -1,4 +1,4 @@
-import Navbar from '../nav/nav.jsx';
+import Navbar from '../nav/Navbar.jsx';
 import { useEffect, useState} from 'react';
 
 const Home = ({content = [], setContent}) => {
@@ -31,8 +31,8 @@ const Home = ({content = [], setContent}) => {
                 {content.map((post, index) => {
                     <div className="postContainer" key={index}>
                         <li>
-                            <h1>{post.subjectLine}</h1>
-                            <h2>{post.jobTitle} at {post.companyName}</h2>
+                            <h2>{post.subjectLine}</h2>
+                            <h3>{post.jobTitle} at {post.companyName}</h3>
                             <p>{post.description}</p>
                         </li>
                     </div>
