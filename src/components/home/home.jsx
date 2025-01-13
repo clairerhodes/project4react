@@ -26,18 +26,33 @@ const Home = ({content = [], setContent}) => {
 
     return (
         <>
-            <Navbar />
-            <ul>
-                {content.map((post, index) => {
-                    <div className="postContainer" key={index}>
-                        <li>
-                            <h1>{post.subjectLine}</h1>
-                            <h2>{post.jobTitle} at {post.companyName}</h2>
-                            <p>{post.description}</p>
-                        </li>
-                    </div>
-                })};
-            </ul>
+            <div>
+                {/* div for logo, navbar, user profile */}
+                {/* <img src=""> logo */}
+                <Navbar />
+                {/* user profile - picture, name, and username */}
+            </div>
+            <div>
+                {/* div for new post OR search bar, showing posts, and footer */}
+                {/* new post (click to show form) or search bar? */}
+                <ul>
+                    {content.map((post, index) => {
+                        <div className="postContainer" key={index}>
+                            <li>
+                                <h1>{post.subjectLine}</h1>
+                                <h6>By {post.userID}</h6>
+                                <h2>{post.jobTitle} at {post.companyName}</h2>
+                                <h4>Job link: {post.jobLink}</h4>
+                                <h4>Job status: {post.jobLink}</h4>
+                                <p>{post.description}</p>
+                                <p>{post.comments}</p>
+                            </li>
+                        </div>
+                    })};
+                </ul>
+                {/* <Footer /> */}
+            </div>
+            
         </>
     );
 };
